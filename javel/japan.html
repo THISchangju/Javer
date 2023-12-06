@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>메인페이지</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            a {text-decoration-line: none; color: black;}
+            .login {
+                height: 30px;}
+            #login {
+                float: right; 
+                height: 30px;  
+                font-size: 85%;}
+            #signup {
+                border-left: 1pt solid gray; 
+                border-right:  1pt solid gray;}
+            .header {height: 130px;}
+            #logo {
+                height: 130px; 
+                width: 130px;
+                float: right;
+            }
+            #mypage {
+                font-size: 30px;
+                ;
+            }
+            .main1_2 {
+                height: 300px; 
+                bottom: 60px; 
+            }
+            #left1 {
+                width: 390px;
+                height: 300px;
+                background: #F5D0A9;
+                position: absolute;
+                z-index: 3;
+            }
+            #winter {
+                padding-left: 30px;
+                padding-top: 50px;
+                font-size: 50px;
+                color: white;
+                text-shadow: 2px 2px 2px gray;
+            }
+            #winter2 {
+                font-size: 55px;
+                color: white;
+                text-shadow: 5px 5px 2px #E6E6E6;
+            }
+            #japan2 {
+                font-size: 55px;
+                color: red;
+                text-shadow: 5px 5px 2px #F7819F;
+            }
+            #japan {
+                padding-left: 65px;
+                font-size: 35px;
+                color: black;
+                
+            }
+            #left2 {
+                width: 300px;
+                height: 300px;
+                transform: skew(340deg);
+                background: #F5D0A9;
+                z-index: 2;
+                margin-left: 70px;
+            }
+            #right1 {
+                width: 800px;
+                height: 300px;
+                position: absolute;
+                z-index: 1;
+            }
+            #right2 {
+                width: 1300px;
+                height: 300px;
+                background: #F5D0A9;
+                position: absolute;
+            }
+            .main2 {
+                height: 550px;}
+            .mypage{
+                color: black;
+                font-size: 22px;
+            }
+            .footer {
+                background-color: gray;
+                height: 150px;
+                margin-top: 70px;
+            }
+            #footer-nav {
+                font-size: 20px;
+                float: left;
+                padding-top: 10px;
+            }
+            .footer1 {
+                background-color: gray;
+            }
+            #ice {
+                text-align: center;
+                color: #A8A8A8;
+            }
+            .date{
+                background-color: #A8A8A8;
+                height: 220px;
+                width: 165px;
+                padding-top: 10px;
+            }
+            #mao {
+                text-align: end;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="login row"> <!--로그인, 회원가입 및 고객센터-->
+                <div class="col-md-12">
+                    <ul class="nav" id="login">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./main.html" style="color: black;">로그아웃</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">고객센터</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header row"> 
+                <!--로고-->
+                <div class="col-md-3"><a href="/javel/main.html"><img src="./img/javel.png" alt="logo" id="logo"></a></div>
+                <!-- 네비게이션 -->
+                <div class="col-md-9 col align-self-center">
+                    <ul class="nav" id="mypage">
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/" style="color: dimgray ;">숙박</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/" style="color: dimgray ;">관광 가이드</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./air.html" style="color: dimgray ;">항공권 예매</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./mypage.html" style="color: dimgray ;">마이페이지</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main1_2 row">
+                <div class="col-md-1" id="left1">
+                    <p id="winter">요번 <b id="winter2">겨울</b></p>
+                    <p id="japan"><b id="japan2">일본</b>으로 떠나요</p>
+                </div>
+                <div class="col-md-3 parallelogram" id="left2"></div>
+                <div class="col-md-6"><img src="./img/일본.jpeg" alt="일본" id="right1"></div>
+                <div class="col-md-3" id="right2"></div>
+            </div>
+            <div class="main2 row">
+                <div class="col-md-2 date">
+                    <form action="">
+                        <input type="date">가는날
+                        <input type="date">돌아오는 날<br><br>
+                        <input type="range" id="money" min="5" max="10">
+                        <pre>10 20 30 40 50 60</pre>
+                        <pre style="font-size: 15px" id="mao">가격(만원 단위)</pre>
+                    </form>
+                </div>
+                <div class="col-md-5" style="padding-top: 10px;">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/삿포로.jfif" style="height: 100%;" class="img-fluid rounded-start" alt="삿포로">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">삿포로</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 450,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/도쿄.jfif" style="height: 100%;" class="img-fluid rounded-start" alt="도쿄">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">도쿄</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 190,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/오사카.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="오사카">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">오사카</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 240,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/쿄토.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="쿄토">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">쿄토</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 400,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/오키나와.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="오키나와">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">오키나와</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 300,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 " style="padding-top: 10px;">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/히로시마.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="히로시마">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">히로시마</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 410,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/치바.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="치바">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">치바</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 280,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/후쿠오카.jfif" style="height: 100%;" class="img-fluid rounded-start" alt="후쿠오카">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">후쿠오카</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 440,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/다카마쓰시.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="다카마쓰시">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">다카마쓰시</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 500,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img/고베.jpg" style="height: 100%;" class="img-fluid rounded-start" alt="고베">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">고베</h5>
+                            <p class="card-text" style="color: #19ad09;">최저가 375,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- footer -->
+                <div class="footer row">
+                    <div class="col-md-12">
+                        <ul class="nav" id="footer-nav">
+                            <li class="nav-item">
+                            <a class="nav-link disabled" href="https://www.youtube.com/" style="color: black">자주 묻는 질문(FAQ)</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link disabled" href="https://www.youtube.com/" style="color: black ;border-left: 1pt solid #DEE1E6">개인 정보 처리 방침</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link disabled" href="https://www.youtube.com/" style="color: black ;border-left: 1pt solid #DEE1E6">이용 약관</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer1 row">
+                    <div class="col-md-12">
+                        <p id="ice">㈜JAVEL 사업자등록번호 : 616-81-59123 대표이사 : 이창주 <br>
+                        경기도 파주시 야당동 하우고개길142(올 때 메로나)</p>
+                    </div>
+                </div>
+            </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
